@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exp</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Exp</h1>
+    <p>Welcome to Express</p>
+    <form action="/send" method="POST">
+      First name: <input type="text" name="fname"><br>
+      Last name: <input type="text" name="lname"><br>
+      <button type="submit">Send to backend</button>
+    </form>
+
+    <p> User data:</p>
+    <%= typeof data  %>
+    <% if (typeof data != "undefined") { %>
+    <p> <%=  data %></p>
+    <% } %>
+
+  </body>
+  <script>
+
+  </script>
+</html>

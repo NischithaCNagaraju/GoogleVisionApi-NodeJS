@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exp</title>
+    <title>SAAS</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Exp</h1>
-    <p>Welcome to Express</p>
+    <h1>Welcome to Google Vision API</h1>
+
+    <!-- This form should be replaced with image upload   -->
     <form action="/send" method="POST">
       First name: <input type="text" name="fname"><br>
-      Last name: <input type="text" name="lname"><br>
       <button type="submit">Send to backend</button>
     </form>
 
-    <p> User data:</p>
-    <%= typeof data  %>
+  <!--    Display the labels here-->
+    <p> Labels :</p>
+    <!--    Checking the type of data and displaying the image, because initially data will be undefined
+        Only after post request , index page will have the data-->
+  <!--    We need html to display all the labels here-->
     <% if (typeof data != "undefined") { %>
     <p> <%=  data %></p>
     <% } %>
-
   </body>
-  <script>
-
-  </script>
 </html>

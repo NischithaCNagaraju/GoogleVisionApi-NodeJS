@@ -17,28 +17,6 @@ router.get('/', function(req, res, next) {
     res.render('index');
 });
 
-/*router.post('/send', function(req, res, next) {
-    console.log('index log - -------------------------------', req.body )
-   // console.log(req.file.pic);
-    var keyName=req.body.pic;
-    console.log(keyName);
-    client
-        .labelDetection(keyName)
-        .then(results => {
-            const labels = results[0].labelAnnotations;
-
-            console.log('Labels:');
-            labels.forEach(label => console.log(label));
-            //console.log(results);
-            console.log(labels[0] , labels[0].score)
-            res.render('index', { data: labels[0].score , title: 'Express'});
-        })
-        .catch(err => {
-            console.error('ERROR:', err);
-            res.render('index', { data: req.body , title: 'Express'});
-        });
-    // res.render('index', { data: req.body , title: 'Express'});
-});*/
 
 router.post('/send', upload.single('pic'),  function(req, res, next) {
     client

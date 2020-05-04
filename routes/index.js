@@ -25,10 +25,12 @@ router.post('/send', upload.single('pic'),  function(req, res, next) {
             const labels = results[0].labelAnnotations;
             console.log('Labels:');
             labels.forEach(label => console.log(label));
-            console.log(labels[0] , labels[0].score)
-            //We need to manipulate the json n send it a format need in the front end(index.ejs)
+            console.log(labels[0] , labels[0].score);
 
-            res.render('index', { data: labels[0].description , title: 'Express'});
+            var arr = JSON.stringify(labels,  null, "    ");  // arr variable is sending the response to data
+            //We need to manipulate the json n send it a format need in the front end(index.ejs)
+            res.render('index', { data: arr, title: 'Express'});
+           // res.render('index', { data: labels[0].description , title: 'Express'});
         })
         .catch(err => {
             console.error('ERROR:', err);

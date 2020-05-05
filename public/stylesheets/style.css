@@ -2,7 +2,75 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
-a {
-  color: #00B7FF;
+.div1{
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 50px;
+  border: solid;
 }
+.div2{
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+  border: double;
+}
+.basic-list {
+  margin-bottom: 0;
+  padding: 0
+}
+
+.basic-list li {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 11px 0
+}
+
+.basic-list li:last-child {
+  border-bottom: none
+}
+
+.basic-list .right {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  padding: 3px 6px;
+  font-weight: 600
+}
+p {
+  margin-left: 100px;
+
+}
+.panel {
+  box-shadow: none;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative
+}
+
+.panel-widget {
+  overflow: hidden;
+  border: none
+}
+.label-happy {
+  background: #399bff
+}
+
+.label-angry {
+  background: #33577b
+}
+
+.label-sad {
+  background: #26a65b
+}
+
+.label-primary {
+  background: #d919e7
+}
+
+.label-funny {
+  background: #f39c12
+}
+

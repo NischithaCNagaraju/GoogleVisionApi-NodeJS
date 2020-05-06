@@ -6,49 +6,42 @@
 </head>
 <body>
 <center>
-  <h1>Welcome to Google Vision API</h1>
+  <h1 class="a">Welcome to Google Vision API</h1>
   <!-- This form should be replaced with image upload   -->
   <div class="div1">
     <form action="/send" method="POST" enctype="multipart/form-data">
       <br>
-      Upload image:  <input type="file" name="pic" required><br><br><br>
+      <u>Upload image:</u>  <input class="btn btn-default" type="file" name="pic" required>
       <br>
       <br>
-      <button type="submit">Send to backend</button>
+      <br>
+      <button type="submit" class="btn btn-default">Send Post</button>
       <br>
       <br>
     </form>
   </div>
-  <p> User data:</p>
-
-  <% if (typeof data != "undefined") { %>
-    <p> <%=  data %></p>
-  <% } %>
-
 </center>
 <!--    Display the labels here-->
 <div class="div2">
   <h1><b><u><p>Labels :</p></u></b></h1>
   <h3><b><u><p>Your Photo:</p></u></b></h3>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;<img src="lady.jpg" height="100" width="100"/>
-  <% if (typeof data != "undefined") { %>
-    <%= a = data*100 %>
-    <div class="col-md-4">
-      <div class="panel panel-widget">
-        <div class="panel-body">
-          <ul class="basic-list">
-            <li>Happy <span class="right label label-happy"><%= a.toFixed(2) %>%</span></li>
-            <li>Angry <span class="right label label-angry">16.9%</span></li>
-            <li>Sad <span class="right label label-sad">15.5%</span></li>
-            <li>Dipressed <span class="right label label-primary">11.8%</span></li>
-            <li>Funny<span class="right label label-funny">3.2%</span></li>
-          </ul>
-        </div>
+  &nbsp;&nbsp;
+  <div class="col-md-4">
+    <div class="panel panel-widget">
+      <div class="panel-body">
+        <ul class="basic-list">
+          <% if (typeof data != "undefined") { %>
+            <% result.forEach(result => { %>
+              <li><b><%= result.description %></b><span class="right label label-happy"><%= result.score*100 %>%</span></li>
+            <% }); %>
+          <% } %>
+        </ul>
       </div>
-      <!-- End Browser Stats -->
     </div>
-  <% } %>
+    <!-- End Browser Stats -->
+  </div>
+
 </div>
 </body>
 </html>

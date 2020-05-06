@@ -11,7 +11,7 @@
   <div class="div1">
     <form action="/send" method="POST" enctype="multipart/form-data">
       <br>
-      <u>Upload image:</u>  <input class="btn btn-default" type="file" name="pic" required>
+      <u>Upload image:</u>  <input class="btn btn-default" type="file" name="pic"  onchange="readURL(this);" required>
       <br>
       <br>
       <br>
@@ -26,7 +26,8 @@
   <h1><b><u><p>Labels :</p></u></b></h1>
   <h3><b><u><p>Your Photo:</p></u></b></h3>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;
+  &nbsp;&nbsp;    <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img" style="height:200px; width:200px">
+
   <div class="col-md-4">
     <div class="panel panel-widget">
       <div class="panel-body">

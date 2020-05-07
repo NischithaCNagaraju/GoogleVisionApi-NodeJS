@@ -1,7 +1,9 @@
 body {
+  background-image: url("bg3.png");
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 .div1{
   margin-left: 250px;
   margin-right: 250px;
@@ -18,9 +20,15 @@ body {
   margin-bottom: 0;
   padding: 0
 }
+.a{
+  background: #f39c12
+}
 
 .basic-list li {
   display: block;
+  font-family: "Lucida Bright", Times, serif;
+  font-style: oblique;
+  font-size: large;
   position: relative;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   padding: 11px 0
@@ -55,22 +63,19 @@ p {
   border: none
 }
 .label-happy {
-  background: #399bff
-}
-
-.label-angry {
-  background: #33577b
-}
-
-.label-sad {
-  background: #26a65b
-}
-
-.label-primary {
-  background: #d919e7
-}
-
-.label-funny {
   background: #f39c12
 }
 
+.btn {
+  font-size: 14px;
+  padding: 7px 20px 7px 20px;
+  border: none;
+  background: #e4e4e4;
+  color: inherit;
+  border-radius: 3px;
+}
+
+.btn-default {
+  background-color: #f39c12;
+  color: #070707
+}

@@ -1,6 +1,6 @@
 # GoogleVisionApi-NodeJS
 
-
+**Group Members** - Abinaya Ramachandran , Atharva Pashankar ,Dikshant Pravin Jain,   Krishna Bhanderi, Nischitha CN,   Pooja Shivaswamy, Zeel Patel.<br>
 Application URL -  https://samplevision-275523.uc.r.appspot.com/
 
 **Description** : We have created a application using NodeJS and google vision API, which uploads an image and detecs its features 
